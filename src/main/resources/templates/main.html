@@ -27,5 +27,16 @@
 <span th:text="1 != 10"></span>
 <span th:text="太郎 == 太郎"></span>
 <span th:text="太郎 != 太郎"></span>
+<hr>
+<!-- 07:条件演算子  -->
+<p th:text="${name} == '太郎'? '太郎さんです!':' 太郎さんではありません。'"></p>
+<!-- 08:条件分岐(ture) -->
+<div th:if="${name} == '太郎'">
+	<p>太郎さんです!</p>
+</div>
+<!-- 09:条件分担(false) -->
+<div th:unless="${name} == '花子'">
+	<p>花子さんではありません。</p>
+</div>
 </body>
 </html>
