@@ -11,5 +11,21 @@
 <h1>こんにちは![[${name}]]さん</h1>
 <!-- 03:値結合  -->
 <h1 th:text="'明日は、' + '晴れ' + ' です。'">表示する部分</h1>
+<hr>
+<!-- 04:値結合(リテラル置換) -->
+<h1 th:text="|こんにちは!${name}さん|">表示する部分</h1>
+<!-- 05:ローカル変数 -->
+<div th:with="a=1,b=2">
+	<span th:text="|${a} + ${b}|"></span>
+</div>
+<!-- 06:比較と等価  -->
+<span th:text="1 > 10"></span>
+<span th:text="1 < 10"></span>
+<span th:text="1 >= 10"></span>
+<span th:text="1 <= 10"></span>
+<span th:text="1 == 10"></span>
+<span th:text="1 != 10"></span>
+<span th:text="太郎 == 太郎"></span>
+<span th:text="太郎 != 太郎"></span>
 </body>
 </html>
