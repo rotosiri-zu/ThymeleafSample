@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ThymeleafController {
 	@GetMapping("show")
 	public String showView(Model model) {
+		// 「Model」にデータを格納する
+		model.addAttribute("name", "太郎");
 		// 戻り値は「ビュー名」を返す
 		return "main";
 	}
