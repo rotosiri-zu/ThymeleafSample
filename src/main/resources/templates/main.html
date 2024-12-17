@@ -105,6 +105,11 @@
 		空文字判定:<span th:text="${#strings.isEmpty(str1)}"></span><br>
 		長さ:<span th:text="${#strings.length(str1)}"></span><br>
 	</div>
+	<hr>
+	<!-- 18: フラグメントを埋め込む -->
+	<div id="one" th:insert="common :: header"></div>
+	<h1>上下にFragmentを埋め込む</h1>
+	<div Id="two" th:replace="common :: footer"></div>
 </body>
 
 </html>
